@@ -24,7 +24,7 @@ export default function Movie(Films) {
 
   return (
     <div className="row mb-5 p-4 shadow">
-      <div className="col-4 h-100">
+      <div className="col-2 h-100">
         <img
           className="img-fluid rounded"
           src={srcImg.current}
@@ -32,7 +32,7 @@ export default function Movie(Films) {
           alt="main-poster"
         />
       </div>
-      <div className="col-8" style={{ fontSize: "16px" }}>
+      <div className="col-10" style={{ fontSize: "16px" }}>
         <div className="title" style={{ fontSize: "40px", fontWeight: "bold" }}>
           {Films.Title}
         </div>
@@ -69,7 +69,6 @@ export default function Movie(Films) {
           <div className="row">
             {Object.keys(Films).map((obj, i) => {
               if (metaKeys.includes(obj)) return <></>;
-
               return (
                 <div className="col-4" key={i}>
                   <span className=" fs-6 fw-light">{obj}:</span>
